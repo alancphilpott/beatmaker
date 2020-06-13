@@ -74,6 +74,12 @@ svg {
     margin: 0rem 2rem;
 }
 
+.controls h1 {
+    width: 50%;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+
 .controls button {
     padding: 1rem;
     border: none;
@@ -102,6 +108,13 @@ select {
     padding: 1rem;
     font-size: 1rem;
     margin-left: 1rem;
+    width: 40%;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+
+.mute.active {
+    background: grey;
 }
 
 @keyframes playTrack {

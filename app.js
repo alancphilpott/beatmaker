@@ -2,6 +2,7 @@ class DrumKit {
     constructor() {
         this.pads = document.querySelectorAll(".pad");
         this.playBtn = document.querySelector(".play");
+        this.muteBtns = document.querySelectorAll(".mute");
         this.selects = document.querySelectorAll("select");
         this.kickAudio = document.querySelector(".kick-sound");
         this.snareAudio = document.querySelector(".snare-sound");
@@ -75,6 +76,36 @@ class DrumKit {
                 break;
         }
     }
+    muteTrack(e) {
+        const trackIndex = e.target.getAttribute("data-track");
+        console.log(e.target.classList);
+        e.target.classList.toggle("active");
+        if (e.target.classList.contains("active")) {
+            switch (trackIndex) {
+                case "0":
+                    this.kickAudio.volume = 0;
+                    break;
+                case "1":
+                    this.snareAudio.volume = 0;
+                    break;
+                case "2":
+                    this.hihatAudio.volume = 0;
+                    break;
+            }
+        } else {
+            switch (trackIndex) {
+                case "0":
+                    this.kickAudio.volume = 1;
+                    break;
+                case "1":
+                    this.snareAudio.volume = 1;
+                    break;
+                case "2":
+                    this.hihatAudio.volume = 1;
+                    break;
+            }
+        }
+    }
 }
 
 const drumKit = new DrumKit();
@@ -91,4 +122,8 @@ drumKit.playBtn.addEventListener("click", () => drumKit.start());
 
 drumKit.selects.forEach((select) => {
     select.addEventListener("change", (e) => drumKit.changeSound(e));
+});
+
+drumKit.muteBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => drumKit.muteTrack(e));
 });
