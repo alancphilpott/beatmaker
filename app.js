@@ -13,6 +13,7 @@ class DrumKit {
         this.index = 0;
         this.bpm = 150;
         this.isPlaying = null;
+        this.tempoSlider = document.querySelector(".tempo-slider");
     }
     activatePad() {
         this.classList.toggle("active");
@@ -49,12 +50,14 @@ class DrumKit {
 
         // Check If Already Playing
         if (!this.isPlaying) {
+            this.playBtn.classList.add("active");
             this.playBtn.innerText = "Stop";
             // If Not - Begin Interval
             this.isPlaying = setInterval(() => {
                 this.repeat();
             }, interval);
         } else {
+            this.playBtn.classList.remove("active");
             this.playBtn.innerText = "Play";
             // If It Is - Stop Interval
             clearInterval(this.isPlaying);
@@ -106,6 +109,23 @@ class DrumKit {
             }
         }
     }
+    changeTempo(e) {
+        const tempoText = document.querySelector(".tempo-num");
+        tempoText.innerText = e.target.value;
+    }
+    updateTempo(e) {
+        this.bpm = e.target.value;
+
+        clearInterval(this.isPlaying);
+        this.isPlaying = null;
+
+        const playBtn = document.querySelector(".play");
+        if (playBtn.classList.contains("active")) {
+            this.start();
+        }
+
+        console.log(`Current BPM: ${this.bpm}`);
+    }
 }
 
 const drumKit = new DrumKit();
@@ -126,4 +146,12 @@ drumKit.selects.forEach((select) => {
 
 drumKit.muteBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => drumKit.muteTrack(e));
+});
+
+drumKit.tempoSlider.addEventListener("input", (e) => {
+    drumKit.changeTempo(e);
+});
+
+drumKit.tempoSlider.addEventListener("change", (e) => {
+    drumKit.updateTempo(e);
 });
