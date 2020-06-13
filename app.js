@@ -80,8 +80,11 @@ class DrumKit {
         }
     }
     muteTrack(e) {
+        const trackMuteIcon = e.target.childNodes[1];
+        console.log(trackMuteIcon);
+
         const trackIndex = e.target.getAttribute("data-track");
-        console.log(e.target.classList);
+
         e.target.classList.toggle("active");
         if (e.target.classList.contains("active")) {
             switch (trackIndex) {
@@ -95,6 +98,8 @@ class DrumKit {
                     this.hihatAudio.volume = 0;
                     break;
             }
+            trackMuteIcon.classList.remove("fa-volume-down");
+            trackMuteIcon.classList.add("fa-volume-mute");
         } else {
             switch (trackIndex) {
                 case "0":
@@ -107,6 +112,8 @@ class DrumKit {
                     this.hihatAudio.volume = 1;
                     break;
             }
+            trackMuteIcon.classList.remove("fa-volume-mute");
+            trackMuteIcon.classList.add("fa-volume-down");
         }
     }
     changeTempo(e) {
