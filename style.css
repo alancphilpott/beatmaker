@@ -31,23 +31,23 @@ svg {
 }
 
 .kick-pad {
-    background: #b78546;
+    background: #ffdcb1;
 }
 .snare-pad {
-    background: #8f2237;
+    background: #ffacbd;
 }
 .hihat-pad {
-    background: #4e4863;
+    background: #bab5cf;
 }
 
 .kick-pad.active {
-    background: #ffd199;
+    background: #b78546;
 }
 .snare-pad.active {
-    background: #ff8ca3;
+    background: #8f2237;
 }
 .hihat-pad.active {
-    background: #bab5cf;
+    background: #4e4863;
 }
 
 .hihat-track,
