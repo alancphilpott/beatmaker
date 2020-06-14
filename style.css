@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 i,
@@ -36,53 +36,53 @@ svg {
 }
 
 .kick-pad {
-    background: #ffdcb1;
+    background: #bef5ff;
 }
 .clap-pad {
-    background: #ffdcb1;
+    background: #d4ffc3;
 }
 .perc-pad {
-    background: #ffdcb1;
+    background: #e9b8d9;
 }
 .shaker-pad {
-    background: #ffdcb1;
+    background: #ffa486;
 }
 .snare-pad {
-    background: #ffacbd;
+    background: #aaa0a5;
 }
 .tom-pad {
-    background: #b9ddc2;
+    background: #9cb9bb;
 }
 .hihat-pad {
-    background: #bab5cf;
+    background: #f1d6ae;
 }
 .openhat-pad {
-    background: #bab5cf;
+    background: #cf8991;
 }
 
 .kick-pad.active {
-    background: #b78546;
+    background: #29adc2;
 }
 .clap-pad.active {
-    background: #b78546;
+    background: #65805b;
 }
 .perc-pad.active {
-    background: #b78546;
+    background: #824c71;
 }
 .shaker-pad.active {
-    background: #b78546;
+    background: #ff4000;
 }
 .snare-pad.active {
-    background: #8f2237;
+    background: #201e1f;
 }
 .tom-pad.active {
-    background: #5ad879;
+    background: #4a5859;
 }
 .hihat-pad.active {
-    background: #4e4863;
+    background: #f4b860;
 }
 .openhat-pad.active {
-    background: #4e4863;
+    background: #c83e4d;
 }
 
 .kick-track,
@@ -174,7 +174,7 @@ select {
     margin: 1rem 0rem;
     width: 100%;
     position: relative;
-    background: rgb(80, 80, 80);
+    background: rgb(150, 206, 168);
     cursor: pointer;
     border-radius: 1rem;
 }
