@@ -56,7 +56,7 @@ svg {
 .kick-track {
     display: flex;
     align-items: center;
-    width: 70%;
+    width: 95%;
     justify-content: space-between;
     margin-top: 5rem;
 }
@@ -76,7 +76,7 @@ svg {
 }
 
 .controls h1 {
-    width: 50%;
+    width: 25%;
     box-sizing: content-box;
     -moz-box-sizing: content-box;
 }
@@ -88,7 +88,7 @@ svg {
     color: white;
     font-size: 1rem;
     cursor: pointer;
-    width: 20%;
+    width: 15%;
     transition: all 0.5s ease;
 }
 
@@ -109,8 +109,7 @@ svg {
 select {
     padding: 1rem;
     font-size: 1rem;
-    margin-left: 1rem;
-    width: 40%;
+    width: 35%;
     box-sizing: content-box;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
@@ -138,7 +137,7 @@ select {
 
 .tempo p {
     font-size: 1.5rem;
-    margin: 1rem;
+    margin: 2rem;
     text-align: center;
 }
 
