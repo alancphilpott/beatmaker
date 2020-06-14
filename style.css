@@ -6,7 +6,6 @@
 
 body {
     font-family: sans-serif;
-    background-image: linear-gradient(120deg, #afafaf, #6e6e6e);
 }
 
 i,
@@ -24,6 +23,7 @@ svg {
 
 .kick-pad,
 .snare-pad,
+.tom-pad,
 .hihat-pad {
     width: 5rem;
     height: 5rem;
@@ -37,6 +37,9 @@ svg {
 .snare-pad {
     background: #ffacbd;
 }
+.tom-pad {
+    background: #b9ddc2;
+}
 .hihat-pad {
     background: #bab5cf;
 }
@@ -47,12 +50,16 @@ svg {
 .snare-pad.active {
     background: #8f2237;
 }
+.tom-pad.active {
+    background: #5ad879;
+}
 .hihat-pad.active {
     background: #4e4863;
 }
 
 .hihat-track,
 .snare-track,
+.tom-track,
 .kick-track {
     display: flex;
     align-items: center;
@@ -63,6 +70,7 @@ svg {
 
 .hihat,
 .snare,
+.tom,
 .kick {
     display: flex;
 }

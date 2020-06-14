@@ -6,6 +6,7 @@ class DrumKit {
         this.selects = document.querySelectorAll("select");
         this.kickAudio = document.querySelector(".kick-sound");
         this.snareAudio = document.querySelector(".snare-sound");
+        this.tomAudio = document.querySelector(".tom-sound");
         this.hihatAudio = document.querySelector(".hihat-sound");
         this.currentKick = "./sounds/kick-classic.wav";
         this.currentSnare = "./sounds/snare-acoustic01.wav";
@@ -40,6 +41,10 @@ class DrumKit {
                 if (bar.classList.contains("hihat-pad")) {
                     this.hihatAudio.currentTime = 0;
                     this.hihatAudio.play();
+                }
+                if (bar.classList.contains("tom-pad")) {
+                    this.tomAudio.currentTime = 0;
+                    this.tomAudio.play();
                 }
             }
         });
@@ -77,6 +82,9 @@ class DrumKit {
             case "hihat-select":
                 this.hihatAudio.src = soundSelected;
                 break;
+            case "tom-select":
+                this.tomAudio.src = soundSelected;
+                break;
         }
     }
     muteTrack(e) {
@@ -95,6 +103,9 @@ class DrumKit {
                     this.snareAudio.volume = 0;
                     break;
                 case "2":
+                    this.tomAudio.volume = 0;
+                    break;
+                case "3":
                     this.hihatAudio.volume = 0;
                     break;
             }
@@ -109,6 +120,9 @@ class DrumKit {
                     this.snareAudio.volume = 1;
                     break;
                 case "2":
+                    this.tomAudio.volume = 1;
+                    break;
+                case "3":
                     this.hihatAudio.volume = 1;
                     break;
             }

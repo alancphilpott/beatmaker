@@ -150,10 +150,47 @@
                     <div class="pad snare-pad b7"></div>
                 </div>
             </div>
+            <div class="tom-track">
+                <div class="controls">
+                    <h1>Tom</h1>
+                    <button data-track="2" class="mute tom-volume">
+                        <i class="fas fa-volume-down"></i>
+                    </button>
+                    <select name="tom-select" id="tom-select">
+                        <option value="./sounds/tom-acoustic01.wav"
+                            >Acoustic</option
+                        >
+                        <option value="./sounds/tom-acoustic02.wav"
+                            >Acoustic 2</option
+                        >
+                        <option value="./sounds/tom-808.wav">808</option>
+                        <option value="./sounds/tom-analog.wav">Analog</option>
+                        <option value="./sounds/tom-chiptune.wav"
+                            >Chiptune</option
+                        >
+                        <option value="./sounds/tom-fm.wav">FM</option>
+                        <option value="./sounds/tom-lofi.wav">LoFi</option>
+                        <option value="./sounds/tom-rototom.wav"
+                            >Rototom</option
+                        >
+                        <option value="./sounds/tom-short.wav">Short</option>
+                    </select>
+                </div>
+                <div class="tom">
+                    <div class="pad tom-pad b0"></div>
+                    <div class="pad tom-pad b1"></div>
+                    <div class="pad tom-pad b2"></div>
+                    <div class="pad tom-pad b3"></div>
+                    <div class="pad tom-pad b4"></div>
+                    <div class="pad tom-pad b5"></div>
+                    <div class="pad tom-pad b6"></div>
+                    <div class="pad tom-pad b7"></div>
+                </div>
+            </div>
             <div class="hihat-track">
                 <div class="controls">
                     <h1>Hihat</h1>
-                    <button data-track="2" class="mute hihat-volume">
+                    <button data-track="3" class="mute hihat-volume">
                         <i class="fas fa-volume-down"></i>
                     </button>
                     <select name="hihat-select" id="hihat-select">
@@ -212,6 +249,7 @@
         <audio src="./sounds/kick-classic.wav" class="kick-sound"></audio>
         <audio src="./sounds/snare-acoustic01.wav" class="snare-sound"></audio>
         <audio src="./sounds/hihat-acoustic01.wav" class="hihat-sound"></audio>
+        <audio src="./sounds/tom-acoustic01.wav" class="tom-sound"></audio>
         <script src="./app.js"></script>
     </body>
 </html>
