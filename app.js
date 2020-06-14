@@ -1,16 +1,29 @@
 class DrumKit {
     constructor() {
+        // Tracks
+        this.kickAudio = document.querySelector(".kick-sound");
+        this.clapAudio = document.querySelector(".clap-sound");
+        this.percAudio = document.querySelector(".perc-sound");
+        this.shakerAudio = document.querySelector(".shaker-sound");
+        this.snareAudio = document.querySelector(".snare-sound");
+        this.tomAudio = document.querySelector(".tom-sound");
+        this.hihatAudio = document.querySelector(".hihat-sound");
+        this.openhatAudio = document.querySelector(".openhat-sound");
+
+        // Current Sound
+        this.currentKick = "./sounds/kick-classic.wav";
+        this.currentClap = "./sounds/clap-analog.wav";
+        this.currentPerc = "./sounds/perc-chirpy.wav";
+        this.currentShaker = "./sounds/shaker-analog.wav";
+        this.currentSnare = "./sounds/snare-acoustic01.wav";
+        this.currentTom = "./sounds/tom-acoustic01.wav";
+        this.currentHihat = "./sounds/hihat-acoustic01.wav";
+        this.currentOpenhat = "./sounds/openhat-acoustic01.wav";
+
         this.pads = document.querySelectorAll(".pad");
         this.playBtn = document.querySelector(".play");
         this.muteBtns = document.querySelectorAll(".mute");
         this.selects = document.querySelectorAll("select");
-        this.kickAudio = document.querySelector(".kick-sound");
-        this.snareAudio = document.querySelector(".snare-sound");
-        this.tomAudio = document.querySelector(".tom-sound");
-        this.hihatAudio = document.querySelector(".hihat-sound");
-        this.currentKick = "./sounds/kick-classic.wav";
-        this.currentSnare = "./sounds/snare-acoustic01.wav";
-        this.currentHihat = "./sounds/hihat-acoustic01.wav";
         this.index = 0;
         this.bpm = 150;
         this.isPlaying = null;
@@ -34,17 +47,33 @@ class DrumKit {
                     this.kickAudio.currentTime = 0;
                     this.kickAudio.play();
                 }
+                if (bar.classList.contains("clap-pad")) {
+                    this.clapAudio.currentTime = 0;
+                    this.clapAudio.play();
+                }
+                if (bar.classList.contains("perc-pad")) {
+                    this.percAudio.currentTime = 0;
+                    this.percAudio.play();
+                }
+                if (bar.classList.contains("shaker-pad")) {
+                    this.shakerAudio.currentTime = 0;
+                    this.shakerAudio.play();
+                }
                 if (bar.classList.contains("snare-pad")) {
                     this.snareAudio.currentTime = 0;
                     this.snareAudio.play();
+                }
+                if (bar.classList.contains("tom-pad")) {
+                    this.tomAudio.currentTime = 0;
+                    this.tomAudio.play();
                 }
                 if (bar.classList.contains("hihat-pad")) {
                     this.hihatAudio.currentTime = 0;
                     this.hihatAudio.play();
                 }
-                if (bar.classList.contains("tom-pad")) {
-                    this.tomAudio.currentTime = 0;
-                    this.tomAudio.play();
+                if (bar.classList.contains("openhat-pad")) {
+                    this.openhatAudio.currentTime = 0;
+                    this.openhatAudio.play();
                 }
             }
         });
@@ -76,14 +105,26 @@ class DrumKit {
             case "kick-select":
                 this.kickAudio.src = soundSelected;
                 break;
+            case "clap-select":
+                this.clapAudio.src = soundSelected;
+                break;
+            case "perc-select":
+                this.percAudio.src = soundSelected;
+                break;
+            case "shaker-select":
+                this.shakerAudio.src = soundSelected;
+                break;
             case "snare-select":
                 this.snareAudio.src = soundSelected;
+                break;
+            case "tom-select":
+                this.tomAudio.src = soundSelected;
                 break;
             case "hihat-select":
                 this.hihatAudio.src = soundSelected;
                 break;
-            case "tom-select":
-                this.tomAudio.src = soundSelected;
+            case "openhat-select":
+                this.openhatAudio.src = soundSelected;
                 break;
         }
     }
@@ -100,13 +141,25 @@ class DrumKit {
                     this.kickAudio.volume = 0;
                     break;
                 case "1":
-                    this.snareAudio.volume = 0;
+                    this.clapAudio.volume = 0;
                     break;
                 case "2":
-                    this.tomAudio.volume = 0;
+                    this.percAudio.volume = 0;
                     break;
                 case "3":
+                    this.shakerAudio.volume = 0;
+                    break;
+                case "4":
+                    this.snareAudio.volume = 0;
+                    break;
+                case "5":
+                    this.tomAudio.volume = 0;
+                    break;
+                case "6":
                     this.hihatAudio.volume = 0;
+                    break;
+                case "7":
+                    this.openhatAudio.volume = 0;
                     break;
             }
             trackMuteIcon.classList.remove("fa-volume-down");
@@ -117,13 +170,25 @@ class DrumKit {
                     this.kickAudio.volume = 1;
                     break;
                 case "1":
-                    this.snareAudio.volume = 1;
+                    this.clapAudio.volume = 1;
                     break;
                 case "2":
-                    this.tomAudio.volume = 1;
+                    this.percAudio.volume = 1;
                     break;
                 case "3":
+                    this.shakerAudio.volume = 1;
+                    break;
+                case "4":
+                    this.snareAudio.volume = 1;
+                    break;
+                case "5":
+                    this.tomAudio.volume = 1;
+                    break;
+                case "6":
                     this.hihatAudio.volume = 1;
+                    break;
+                case "7":
+                    this.openhatAudio.volume = 1;
                     break;
             }
             trackMuteIcon.classList.remove("fa-volume-mute");

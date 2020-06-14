@@ -22,9 +22,13 @@ svg {
 }
 
 .kick-pad,
+.clap-pad,
+.perc-pad,
+.shaker-pad,
 .snare-pad,
 .tom-pad,
-.hihat-pad {
+.hihat-pad,
+.openhat-pad {
     width: 5rem;
     height: 5rem;
     margin: 1rem 0.5rem;
@@ -32,6 +36,15 @@ svg {
 }
 
 .kick-pad {
+    background: #ffdcb1;
+}
+.clap-pad {
+    background: #ffdcb1;
+}
+.perc-pad {
+    background: #ffdcb1;
+}
+.shaker-pad {
     background: #ffdcb1;
 }
 .snare-pad {
@@ -43,8 +56,20 @@ svg {
 .hihat-pad {
     background: #bab5cf;
 }
+.openhat-pad {
+    background: #bab5cf;
+}
 
 .kick-pad.active {
+    background: #b78546;
+}
+.clap-pad.active {
+    background: #b78546;
+}
+.perc-pad.active {
+    background: #b78546;
+}
+.shaker-pad.active {
     background: #b78546;
 }
 .snare-pad.active {
@@ -56,11 +81,18 @@ svg {
 .hihat-pad.active {
     background: #4e4863;
 }
+.openhat-pad.active {
+    background: #4e4863;
+}
 
-.hihat-track,
+.kick-track,
+.clap-track,
+.perc-track,
+.shaker-track,
 .snare-track,
 .tom-track,
-.kick-track {
+.hihat-track,
+.openhat-track {
     display: flex;
     align-items: center;
     width: 95%;
@@ -68,10 +100,14 @@ svg {
     margin-top: 5rem;
 }
 
-.hihat,
+.kick,
+.clap,
+.perc,
+.shaker,
 .snare,
 .tom,
-.kick {
+.hihat,
+.openhat {
     display: flex;
 }
 
